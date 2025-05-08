@@ -110,9 +110,6 @@ This project is open-source and available under the **MIT License**.
 ---
 ---
 
-Claro! Aqui está um README formatado no estilo do GitHub, agora completamente em **português**, explicando o funcionamento do código, como utilizá-lo e os resultados esperados. 🚀
-
----
 
 # 📡 Analisador de Sinais Discretos
 
