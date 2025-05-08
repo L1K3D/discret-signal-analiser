@@ -107,3 +107,122 @@ Have ideas for improving the project? Feel free to **fork** this repository and 
 This project is open-source and available under the **MIT License**.
 
 ---
+---
+---
+
+Claro! Aqui está um README formatado no estilo do GitHub, agora completamente em **português**, explicando o funcionamento do código, como utilizá-lo e os resultados esperados. 🚀
+
+---
+
+# 📡 Analisador de Sinais Discretos
+
+## 📌 Visão Geral
+O **Analisador de Sinais Discretos** é um sistema em Python que processa sinais de tempo discreto aplicando **transformações** (deslocamento, reflexão e compressão) e **analisando propriedades do sistema** (causalidade, memória, estabilidade, invariância no tempo e linearidade). Ele permite que o usuário forneça um **sinal personalizado**, visualize **gráficos das transformações** e analise **como diferentes sistemas reagem ao sinal**.
+
+---
+
+## 🔧 Recursos
+✔ Permite entrada de até **9 números inteiros** para análise de sinais.  
+✔ Aplica as seguintes **transformações** no sinal de entrada:
+   - **Deslocamento Temporal**: Move o sinal **2 unidades** para frente no tempo.
+   - **Reflexão Temporal**: Espelha o sinal sobre o eixo do tempo.
+   - **Compressão Temporal**: Reduz a escala de tempo por um fator de **2**.
+✔ Implementa **3 sistemas discretos** para análise:
+   - **Sistema 1:** Diferença entre amostras consecutivas \( y[n] = x[n] - x[n-1] \).
+   - **Sistema 2:** Soma acumulada (integrador) \( y[n] = \sum x[k] \).
+   - **Sistema 3:** Compressão temporal \( y[n] = x[2n] \).
+✔ Avalia **5 propriedades** dos sistemas:
+   - **Causalidade**
+   - **Memória**
+   - **Estabilidade**
+   - **Invariância no tempo**
+   - **Linearidade**
+✔ Gera **gráficos discretos** para visualização dos sinais.
+
+---
+
+## 🚀 Como instalar e executar
+
+### Pré-requisitos
+Certifique-se de ter o **Python 3.6+** instalado e os pacotes necessários. Para instalar os pacotes:
+
+```bash
+pip install numpy matplotlib
+```
+
+### Executando o código
+Baixe o repositório ou clone-o usando o Git:
+```bash
+git clone https://github.com/seu-usuario/analisador-sinais-discretos.git
+cd analisador-sinais-discretos
+```
+Agora, execute o script Python:
+```bash
+python analisador_sinais.py
+```
+
+### Após a execução
+1️⃣ O programa solicitará que você digite um **conjunto de até 9 números inteiros**.  
+2️⃣ O código **validará a entrada** e processará o sinal.  
+3️⃣ **Gráficos serão gerados** para exibir o **sinal original** e suas **transformações**.  
+4️⃣ A análise dos **sistemas discretos** será exibida no **terminal**.  
+
+---
+
+## 🖥️ Exemplo de Uso
+### Entrada do usuário:
+```
+Digite até 9 números inteiros separados por espaço: 0 -2 -1 0 1 2 3 0 0
+```
+
+### Saída esperada:
+✅ **Gráficos gerados**:  
+📌 Sinal **original**  
+📌 Sinal **deslocado** \( x[n-2] \)  
+📌 Sinal **refletido** \( x[-n] \)  
+📌 Sinal **comprimido** \( x[2n] \)  
+
+✅ **Análise exibida no terminal**:
+```
+Análise do Sistema: y[n] = x[n] - x[n-1]
+  Causal: Sim
+  Com memória: Sim
+  Estável: Sim
+  Invariante no tempo: Não
+  Linear: Sim
+----------------------------------------
+Análise do Sistema: y[n] = soma acumulada de x[k]
+  Causal: Sim
+  Com memória: Sim
+  Estável: Sim
+  Invariante no tempo: Não
+  Linear: Sim
+----------------------------------------
+Análise do Sistema: y[n] = x[2n]
+  Causal: Sim
+  Com memória: Não
+  Estável: Sim
+  Invariante no tempo: Sim
+  Linear: Sim
+----------------------------------------
+```
+
+---
+
+## ⚠️ **Observações Importantes**
+- O sinal de entrada **deve conter apenas números inteiros** entre **-9 e 9**.
+- O sistema **assume comportamento causal** baseado em índices **não negativos**.
+- O sistema de soma acumulada **é limitado ao tamanho do vetor fornecido**.
+- A compressão temporal **pode descartar alguns valores**, dependendo do comprimento do vetor.
+
+---
+
+## 🤝 **Contribuindo**
+Quer sugerir melhorias ou novas funcionalidades? Sinta-se à vontade para **fazer um fork** deste repositório e enviar um **pull request**! Se encontrar **bugs**, relate-os na seção **Issues** no GitHub. 📬
+
+---
+
+## 📜 **Licença**
+Este projeto é **open-source** e está disponível sob a **Licença MIT**.
+
+---
